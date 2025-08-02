@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay With Carrot - Natural Drinks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0fff0 100%);
+        }
+        
+        .drink-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link:hover {
+            color: #4ade80;
+        }
+        
+        .cart-item {
+            transition: all 0.3s ease;
+        }
+        
+        .cart-item:hover {
+            background-color: #f0fdf4;
+        }
+        
+        .add-to-cart-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .add-to-cart-btn:hover {
+            background-color: #22c55e;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-carrot text-3xl text-green-500 mr-2"></i>
+                <a href="#" class="text-2xl font-bold text-gray-800">Stay With Carrot</a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#drinks" class="nav-link text-gray-600 hover:text-green-500 font-medium">Drinks</a>
+                <a href="#cart" class="nav-link text-gray-600 hover:text-green-500 font-medium">Cart</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-green-500 font-medium">Contact</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-green-500 font-medium">About</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#drinks" class="block py-2 text-gray-600 hover:text-green-500">Drinks</a>
+            <a href="#cart" class="block py-2 text-gray-600 hover:text-green-500">Cart</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-green-500">Contact</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-green-500">About</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Natural Drinks for a Healthier You</h1>
+                <p class="text-lg text-gray-600 mb-6">Discover our refreshing, all-natural beverages crafted with care and the finest ingredients.</p>
+                <a href="#drinks" class="bg-green-500 text-white px-6 py-3 rounded-full font-medium hover:bg-green-600 transition duration-300 inline-block">Explore Drinks</a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Fresh drinks" 
+                     class="rounded-lg shadow-xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Drinks -->
+    <section id="drinks" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Signature Drinks</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Drink 1 -->
+                <div class="drink-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://www.theculinarycompass.com/wp-content/uploads/2019/03/Baileys-Grasshopper-720-7-683x1024.jpg" 
+                             alt="Minto Milk" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Minto Milk</h3>
+                        <p class="text-gray-600 mb-4">Our signature refreshing Minto Milk, With Zero sugar and artificial flavours.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-green-600">$2.99</span>
+                            <button class="add-to-cart-btn bg-green-500 text-white px-4 py-2 rounded-full font-medium hover:bg-green-600" 
+                                    data-name="Minto Milk" 
+                                    data-price="2.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Drink 2 -->
+                <div class="drink-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://cdn.shopify.com/s/files/1/0687/6050/2545/files/ginger-slices-jagger.webp?v=1688973432" 
+                             alt="The Panagam" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">The Panagam</h3>
+                        <p class="text-gray-600 mb-4">A tropical blend of Panagam, With Spicy notes and Natural flavours.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-green-600">$4.49</span>
+                            <button class="add-to-cart-btn bg-green-500 text-white px-4 py-2 rounded-full font-medium hover:bg-green-600" 
+                                    data-name="The Panagam" 
+                                    data-price="4.49">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Drink 3 -->
+                <div class="drink-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://ohmyfacts.com/wp-content/uploads/2024/06/45-facts-about-orange-juice-1717912542.jpeg" 
+                             alt="Orangy Vibes" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Orangy Vibes</h3>
+                        <p class="text-gray-600 mb-4">Fresh, Juicy Orange with more & more vibe.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-green-600">$4.99</span>
+                            <button class="add-to-cart-btn bg-green-500 text-white px-4 py-2 rounded-full font-medium hover:bg-green-600" 
+                                    data-name="Orangy Vibes" 
+                                    data-price="4.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Your Cart</h2>
+            
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <div id="cart-items" class="divide-y divide-gray-200">
+                    <div class="p-6 text-center text-gray-500">
+                        <i class="fas fa-shopping-cart text-4xl mb-4 text-gray-300"></i>
+                        <p>Your cart is empty</p>
+                    </div>
+                </div>
+                
+                <div id="cart-summary" class="hidden p-6 bg-gray-50 border-t border-gray-200">
+                    <div class="flex justify-between mb-4">
+                        <span class="font-medium text-gray-700">Subtotal</span>
+                        <span id="cart-subtotal" class="font-bold">$0.00</span>
+                    </div>
+                    <button class="w-full bg-green-500 text-white py-3 rounded-lg font-medium hover:bg-green-600 transition duration-300">
+                        Proceed to Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Get in Touch</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-600 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Our Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-green-500 mt-1 mr-3"></i>
+                            <p>123 Beverage Street, Drinkville, DV 12345</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-green-500 mr-3"></i>
+                            <p>(123) 456-7890</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-green-500 mr-3"></i>
+                            <p>info@staywithcarrot.com</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-green-500 mr-3"></i>
+                            <p>Open Monday-Saturday: 8:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-600 hover:text-green-500 text-xl"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-green-500 text-xl"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-green-500 text-xl"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-green-500 text-xl"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">About Us</h2>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Welcome to Stay With Carrot!</h3>
+                        <p class="text-gray-600 mb-4">We are passionate about crafting the finest natural beverages using only the freshest ingredients.</p>
+                        <p class="text-gray-600 mb-6">Founded in 2020, Stay With Carrot has quickly become a favorite spot for health-conscious individuals alike.</p>
+                        <p class="text-gray-600">Thank you for choosing Stay With Carrot. We look forward to serving you!</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 bg-green-50">
+                        <div class="p-6 border-b md:border-b-0 md:border-r border-green-100">
+                            <h4 class="text-lg font-bold text-green-700 mb-3">Our Mission</h4>
+                            <p class="text-gray-600">To provide delicious, healthy, and natural drink options that nourish both body and soul.</p>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-bold text-green-700 mb-3">Our Values</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>100% Natural Ingredients</li>
+                                <li>Sustainable Sourcing</li>
+                                <li>Customer Satisfaction</li>
+                                <li>Community Engagement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-carrot text-2xl text-green-400 mr-2"></i>
+                        <span class="text-xl font-bold">Stay With Carrot</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Natural Drinks for a Healthier You</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 text-center md:text-left">
+                    <a href="#drinks" class="text-gray-400 hover:text-white">Drinks</a>
+                    <a href="#cart" class="text-gray-400 hover:text-white">Cart</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+                    <a href="#about" class="text-gray-400 hover:text-white">About</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Stay With Carrot. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Cart functionality
+        let cart = [];
+        
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const name = this.getAttribute('data-name');
+                const price = parseFloat(this.getAttribute('data-price'));
+                
+                // Check if item already exists in cart
+                const existingItem = cart.find(item => item.name === name);
+                
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        name: name,
+                        price: price,
+                        quantity: 1
+                    });
+                }
+                
+                updateCart();
+            });
+        });
+        
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartSummary = document.getElementById('cart-summary');
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="p-6 text-center text-gray-500">
+                        <i class="fas fa-shopping-cart text-4xl mb-4 text-gray-300"></i>
+                        <p>Your cart is empty</p>
+                    </div>
+                `;
+                cartSummary.classList.add('hidden');
+            } else {
+                let itemsHTML = '';
+                let subtotal = 0;
+                
+                cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    subtotal += itemTotal;
+                    
+                    itemsHTML += `
+                        <div class="cart-item p-4 flex justify-between items-center">
+                            <div>
+                                <h4 class="font-medium">${item.name}</h4>
+                                <p class="text-sm text-gray-500">$${item.price.toFixed(2)} each</p>
+                            </div>
+                            <div class="flex items-center">
+                                <button class="decrease-btn text-gray-500 px-2 py-1 rounded-full hover:bg-gray-100" data-name="${item.name}">
+                                    <i class="fas fa-minus text-xs"></i>
+                                </button>
+                                <span class="mx-2">${item.quantity}</span>
+                                <button class="increase-btn text-gray-500 px-2 py-1 rounded-full hover:bg-gray-100" data-name="${item.name}">
+                                    <i class="fas fa-plus text-xs"></i>
+                                </button>
+                                <span class="ml-4 font-medium">$${itemTotal.toFixed(2)}</span>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                cartItems.innerHTML = itemsHTML;
+                document.getElementById('cart-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+                cartSummary.classList.remove('hidden');
+                
+                // Add event listeners to quantity buttons
+                document.querySelectorAll('.decrease-btn').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const name = this.getAttribute('data-name');
+                        const item = cart.find(item => item.name === name);
+                        
+                        if (item.quantity > 1) {
+                            item.quantity -= 1;
+                        } else {
+                            cart = cart.filter(item => item.name !== name);
+                        }
+                        
+                        updateCart();
+                    });
+                });
+                
+                document.querySelectorAll('.increase-btn').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const name = this.getAttribute('data-name');
+                        const item = cart.find(item => item.name === name);
+                        item.quantity += 1;
+                        updateCart();
+                    });
+                });
+            }
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
